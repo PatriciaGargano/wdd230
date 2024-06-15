@@ -3,10 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="WDD 230 - Web Frontend Developmen - Patricia Gargano-course assignment portal" />
+    <meta name="author" content="Patricia Gargano" />
+    <title>Patricia Gargano- WDD 230 - Web Frontend Development</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
 </head>
 <body>
-    <h1>Test page</h1>
-    <p>This is a testing page. Do not go furher the paragraph that is written here.</p>
+    <heather>
+        <img src="images/personal_profile.jpg" height="75" width="57" alt="Profile Image">
+        <span>Patricia Gargano</span>
+    </heather>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Site Plan</a></li>
+            <li><a href="#">Form</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>WDD 230: Web Frontend Development</h1>
+
+        <section class="card">
+            <h2>Learning Activities</h2>
+            <ul>
+                <li><a href="#">Activity 1</a></li>
+                <li><a href="#">Activity 2</a></li>
+                <li><a href="#">Activity 3</a></li>
+            </ul>
+        </section>
+    
+        <section class="card">
+            <h2>Information</h2>
+
+        </section>
+
+    </main>
+   
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Patricia Gargano, Argentina</p>
+        <p id="lastModified"></p>
+
+    </footer>
+    <script src="getDates.js"></script>
 </body>
 </html>
