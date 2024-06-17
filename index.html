@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 230 - Web Frontend Developmen - Patricia Gargano-course assignment portal" />
+    <meta name="description" content="WDD 230 - Web Frontend Development - Patricia Gargano-course assignment portal" />
     <meta name="author" content="Patricia Gargano" />
-    <title>Patricia Gargano- WDD 230 - Web Frontend Development</title>
+    <title>Patricia Gargano - WDD 230 - Web Frontend Development</title>
+    
+    <!-- Open Graph meta properties -->
+    <meta property="og:title" content="Patricia Gargano - WDD 230 - Web Frontend Development" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://example.com/images/hometown.jpg" />
+    <meta property="og:url" content="https://example.com/index.html" />
+
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="icon" href="images/favicon (1).ico">
 </head>
 <body>
-    <heather>
+    <header>
         <img src="images/personal_profile.jpg" height="75" width="57" alt="Profile Image">
         <span>Patricia Gargano</span>
-    </heather>
+    </header>
     <nav>
         <ul>
             <li><a href="index.html" class="active">Home</a></li>
@@ -37,16 +44,13 @@
     
         <section class="card">
             <h2>Information</h2>
-
         </section>
-
     </main>
    
     <footer>
-        <footer>
-            <p>&copy; <span id="currentYear"></span> Patricia Gargano, Argentina <img src="images/bandera_Argentina.jpeg" height="57" width= "57" alt="Flag of Argentina"> </p>
-            <p id="lastModified"></p>
-        </footer>
+        <p>&copy; <span id="currentYear"></span> Patricia Gargano, Argentina <img src="images/bandera_Argentina.jpeg" height="20" width="20" alt="Flag of Argentina"> </p>
+        <p id="lastModified"></p>
+    </footer>
     <script src="scripts/getDates.js"></script>
 </body>
 </html>
