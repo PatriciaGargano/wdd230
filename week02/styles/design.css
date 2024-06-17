@@ -1,0 +1,57 @@
+body {
+    font-family: 'Roboto', helvetica, sans-serif;
+}
+
+header,
+main,
+footer {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.banner {
+    padding: 1rem;
+    background-color: #e7d9e5;
+    text-align: center; /* Center the text in the banner */
+}
+
+h1 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Create two columns */
+    gap: 1rem; /* Optional: add gap between columns */
+}
+
+h2 {
+    color: navy;
+    text-align: left; /* Left-align the h2 elements */
+    grid-column: 1 / -1; /* Span h2 elements across both columns */
+}
+
+article {
+    grid-column: 1 / 2; /* Place article in the first column */
+}
+
+ul {
+    grid-column: 2 / 3; /* Place list in the second column */
+}
+
+article p {
+    text-align: justify;
+}
+
+.callout {
+    color: #090318;
+    background-color: #e7d9e5;
+    padding: 1rem; /* Fix the padding issues */
+}
+
+footer {
+    margin-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: smaller;
+    text-align: left; /* Move footer content to the left */
+}
