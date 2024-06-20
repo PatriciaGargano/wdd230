@@ -42,6 +42,19 @@ nav {
     background-color: #00796b;
     width: 100%;
 }
+#menu{
+    font-size: 2rem;
+    background: none;
+    border:none;
+    color:rgb(233, 240, 227);
+    cursor:pointer;
+    width:100%;
+    text-align: left;
+    padding: .25rem 2vw;
+}
+ul.menuLinks{
+    display:none;
+}
 
 nav ul {
     list-style: none;
@@ -132,4 +145,35 @@ ul {
 
 ul li {
     list-style-type: none;
+}
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode header {
+    background-color: #111;
+}
+
+.dark-mode nav {
+    background-color: #222;
+}
+
+.dark-mode nav ul li a {
+    color: #fff;
+}
+
+.dark-mode .card {
+    background-color: #444;
+    color: #fff;
+}
+
+.dark-mode footer {
+    background-color: #111;
+    color: #fff;
+}
+
+.dark-mode h1, .dark-mode h2 {
+    color: #fff;
 }

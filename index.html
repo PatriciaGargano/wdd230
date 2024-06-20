@@ -21,9 +21,11 @@
     <header>
         <img src="images/personal_profile.jpg" height="75" width="57" alt="Profile Image">
         <span>Patricia Gargano</span>
+        <button id="darkModeToggle" aria-label="Toggle Dark Mode">Dark Mode</button>
     </header>
     <nav>
-        <ul>
+        <button id="menu" aria-label="Toggle Menu"></button>
+        <ul class="menuLinks">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="#">Chamber</a></li>
             <li><a href="chamber-site-plan.html">Site Plan</a></li>
@@ -52,5 +54,7 @@
         <p id="lastModified"></p>
     </footer>
     <script src="scripts/getDates.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/darkModeToggle.js"></script>
 </body>
 </html>
