@@ -1,0 +1,136 @@
+/* Basic resets */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header styling */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed; /* Fix the header at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the header is above other elements */
+}
+
+header h1 {
+    display: inline;
+    margin-left: 10px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Adding space to top to prevent content overlapping header */
+main {
+    padding-top: 60px; /* Adjust based on header height */
+}
+
+/* Hero section styling */
+#hero {
+    position: relative;
+    text-align: center;
+    color: black;
+}
+
+#hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Call to action styling */
+#call-to-action {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.cta-button {
+    background: #1f036e;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/* Current events styling */
+#current-events {
+    padding: 20px 0;
+}
+
+#current-events h2, #weather h2, #spotlights h2 {
+    margin-bottom: 10px;
+}
+
+#current-events ul li {
+    padding: 5px 0;
+}
+
+/* Weather section styling */
+#weather {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.weather-card {
+    display: inline-block;
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Company spotlights styling */
+#spotlights {
+    padding: 20px 0;
+}
+
+.spotlight {
+    padding: 10px;
+    background: #f8f8f8;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Footer styling */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0; /* Increased padding for better spacing */
+}
+
+footer p {
+    margin: 5px 0; /* Add margin between footer paragraphs */
+}
