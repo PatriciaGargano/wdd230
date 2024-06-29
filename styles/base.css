@@ -28,8 +28,8 @@ header {
 
 header img {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     margin-bottom: 10px;
 }
 
@@ -38,22 +38,29 @@ header span {
     font-weight: bold;
 }
 
+header button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
 nav {
     background-color: #00796b;
     width: 100%;
 }
-#menu{
+
+#menu {
     font-size: 2rem;
     background: none;
-    border:none;
-    color:rgb(233, 240, 227);
-    cursor:pointer;
-    width:100%;
+    border: none;
+    color: rgb(233, 240, 227);
+    cursor: pointer;
+    width: 100%;
     text-align: left;
     padding: .25rem 2vw;
 }
-ul.menuLinks{
-    display:none;
+
+ul.menuLinks {
+    display: none;
 }
 
 nav ul {
@@ -91,6 +98,41 @@ main {
     align-items: center;
 }
 
+.hero {
+    margin: 10px auto;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, .1);
+    height: 300px;
+}
+
+.herolabel {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: radial-gradient(#fff, #4D5B97);
+    border: 1px solid rgba(0, 0, 0, .75);
+    padding: 1.5rem;
+    box-shadow: 0 0 3rem #fff;
+    opacity: 0.75;
+}
+
+.herolabel p {
+    margin: 0;
+    padding: .25rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: "Great Vibes", serif;
+}
+
+.hero picture {
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
 .card-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -103,6 +145,26 @@ main {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
+}
+
+p {
+    margin: 1rem;
+}
+
+.label {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+}
+
+#visits {
+    color: navy;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.map {
+    text-align: center;
+    margin: 20px 0;
 }
 
 footer {
@@ -146,6 +208,7 @@ ul {
 ul li {
     list-style-type: none;
 }
+
 /* Dark mode styles */
 body.dark-mode {
     background-color: #333;
