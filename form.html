@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 230 - Web Frontend Development - Patricia Gargano-course assignment portal">
+    <meta name="author" content="Patricia Gargano">
+    <title>Patricia Gargano - WDD 230 - Web Frontend Development</title>
+    
+    <!-- Open Graph meta properties -->
+    <meta property="og:title" content="Patricia Gargano - WDD 230 - Web Frontend Development">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.bahia.gob.ar/wp-content/uploads/2017/05/bahia-aerea.jpg">
+    <meta property="og:url" content="https://patriciagargano.github.io/wdd230//index.html">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="images/faviconf.ico">
+</head>
+<body>
+    <header>
+        <img src="images/personal_profile.webp" height="75" width="57" alt="Profile Image">
+        <span>Patricia Gargano</span>
+        <button id="darkModeToggle" aria-label="Toggle Dark Mode">Dark Mode</button>
+    </header>
+    <nav>
+        <button id="menu" aria-label="Toggle Menu"></button>
+        <ul class="menuLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="chamber-site-plan.html">Site Plan</a></li>
+            <li><a href="lazyload.html">Lazy</a></li>
+        </ul>
+    </nav>
+    <main>
+        <main>
+            <form method="get" action="record.html" onsubmit="validateForm(event)">
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" pattern="[a-zA-Z0-9]{8,}" title="Password must be at least 8 alphanumeric characters long" required>
+                </div>
+                <div>
+                    <label for="confirm_password">Password repeated for confirmation:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid email address" required>
+                </div>
+                <div>
+                    <label for="page_rating">Page Rating:</label>
+                    <input type="range" id="page_rating" name="page_rating" min="1" max="10" step="1" oninput="updateRangeValue(this.value)" onchange="updateRangeValue(this.value)">
+                    <span id="rangeValue">5</span>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </main>
+
+    </main>
+        
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Patricia Gargano, Argentina <img src="images/bandera_Argentina.jpeg" height="20" width="20" alt="Flag of Argentina"> </p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/getDates.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/darkModeToggle.js"></script>
+    <script src="scripts/visits.js"></script>
+</body>
+</html>
