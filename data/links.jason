@@ -1,0 +1,53 @@
+{
+    "weeks" [
+        {
+            "week": "Week 1",
+            "links": [
+                {
+                    "url": "week01/holygrail.html",
+                    "title": "Activity 1-HolyGrail"
+                }
+            ]
+        },
+        {
+            "week": "Week 2",
+            "links": [
+                {
+                    "url": "week02/design.html",
+                    "title": "Activity 2-Design"
+                }
+            ]
+        },
+        {
+            "week": "Week 3",
+            "links": [
+                {
+                    "url": "week03/images/landscape.webp",
+                    "title": "Activity 3-WebP"
+                },
+                {
+                    "url": "week03/responsive-images.html",
+                    "title": "Activity 3-Responsive"
+                }
+            ]
+        },
+        {
+            "week": "Week 4",
+            "links": [
+                {
+                    "url": "week04/someactivity.html",
+                    "title": "Activity 4-SomeActivity"
+                }
+            ]
+        },
+        {
+            "week": "Week 5",
+            "links": [
+                {
+                    "url": "week05/anotheractivity.html",
+                    "title": "Activity 5-AnotherActivity"
+                }
+            ]
+        }
+    ]
+}

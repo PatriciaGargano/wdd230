@@ -44,34 +44,55 @@
                     <p>Buenos Aires Temple</p>
                 </div>
             </div>
-
-        <section class="card">
-            <h2>Learning Activities</h2>
-            <ul>
-                <li><a href="week01/holygrail.html">Activity 1-HolyGrail</a></li>
-                <li><a href="week02/design.html">Activity 2-Design</a></li>
-                </li><a href="week03/images/landscape.webp">Activity 3-WebP</a>
-                </li><a href="week03/responsive-images.html">Activity 3-Responsive</a>
-            </ul>
-        </section>
-    
-        <section class="card">
-            <h2>Information!</h2>
-        </section>
-        <p><span class="label">Number of Visits: </span><span class="visits"></span></p>
-    </main>
- <div class="map">
-    <iframe 
-        src="https://maps.app.goo.gl/qkv4re9ewewTYiWW7">
-    </iframe>
+    <section class="card">
+        <h2>Learning Activities</h2>
+        <ul id="activities"></ul>
+    </section>
+    <section class="card">
+        <h2>Information!</h2>
+    </section>
+    <p><span class="label">Number of Visits: </span><span class="visits"></span></p>
+</main>
+<div class="map">
+<iframe 
+    src="https://maps.app.goo.gl/qkv4re9ewewTYiWW7">
+</iframe>
 </div>
-    <footer>
-        <p>&copy; <span id="currentYear"></span> Patricia Gargano, Argentina <img src="images/bandera_Argentina.jpeg" height="20" width="20" alt="Flag of Argentina"> </p>
-        <p id="lastModified"></p>
-    </footer>
+<footer>
+    <p>&copy; <span id="currentYear"></span> Patricia Gargano, Argentina <img src="images/bandera_Argentina.jpeg" height="20" width="20" alt="Flag of Argentina"> </p>
+    <p id="lastModified"></p>
+</footer>
+    <script>
+        fetch('data/links.jason')
+            .then(response => response.json())
+            .then(data => {
+                const activitiesList = document.getElementById('activities');
+                data.weeks.forEach(week => {
+                    const weekItem = document.createElement('li');
+                    weekItem.textContent = week.week;
+                    const linksList = document.createElement('ul');
+                    week.links.forEach(link => {
+                        const linkItem = document.createElement('li');
+                        const anchor = document.createElement('a');
+                        anchor.href = link.url;
+                        anchor.textContent = link.title;
+                        linkItem.appendChild(anchor);
+                        linksList.appendChild(linkItem);
+                    });
+                    activitiesList.appendChild(weekItem);
+                    activitiesList.appendChild(linksList);
+                });
+            })
+            .catch(error => console.error('Error loading JSON:', error));
+    </script>
     <script src="scripts/getDates.js"></script>
     <script src="scripts/menu.js"></script>
     <script src="scripts/darkModeToggle.js"></script>
     <script src="scripts/visits.js"></script>
+    <script src="scripts/links.js"></script>
 </body>
 </html>
+</body>
+</html>
+
+
