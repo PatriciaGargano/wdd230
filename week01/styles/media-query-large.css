@@ -4,4 +4,12 @@
         background-color: black;
         color: white;
     }
+
+    /* Set up two columns of equal size in the main element */
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px; /* Optional: adds space between the columns */
+    }
 }
+
