@@ -3,75 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 230 - Web Frontend Development - Patricia Gargano-course assignment portal">
-    <meta name="author" content="Patricia Gargano">
     <title>Patricia Gargano - WDD 230 - Web Frontend Development</title>
-    
-    <!-- Open Graph meta properties -->
-    <meta property="og:title" content="Patricia Gargano - WDD 230 - Web Frontend Development">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://www.bahia.gob.ar/wp-content/uploads/2017/05/bahia-aerea.jpg">
-    <meta property="og:url" content="https://patriciagargano.github.io/wdd230//index.html">
-
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <link rel="icon" href="images/faviconf.ico">
 </head>
 <body>
     <header>
         <img src="images/personal_profile.webp" height="75" width="57" alt="Profile Image">
-        <span>Patricia Gargano</span>
+        <h1>Patricia Gargano</h1>
         <button id="darkModeToggle" aria-label="Toggle Dark Mode">Dark Mode</button>
     </header>
     <nav>
-        <button id="menu" aria-label="Toggle Menu"></button>
-        <ul class="menuLinks">
+        <ul>
+            <button id="menu" aria-label="Toggle Menu"></button>
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="chamber/index.html">Chamber</a></li>
-            <li><a href="chamber-site-plan.html">Site Plan</a></li>
+            <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
             <li><a href="form.html">Form</a></li>
         </ul>
     </nav>
     <main>
-        <h1>WDD 230: Web Frontend Development</h1>
-            <div class="hero">
-                <picture>
-                    <source media="(max-width: 400px)" srcset="images/temple-mobile.webp">
-                    <source media="(max-width: 960px)" srcset="images/temple-large.webp">
-                    <img src="images/hero-temple-960.webp" alt="Favorite Latter-day Temple" width="960" height="540">
-                </picture>
-                <div class="herolabel">
-                    <p>Buenos Aires Temple</p>
-                </div>
-            </div>
-
-        <section class="card">
-            <h2>Learning Activities</h2>
-            <ul>
-                <li><a href="week01/holygrail.html">Activity 1-HolyGrail</a></li>
-                <li><a href="week02/design.html">Activity 2-Design</a></li>
-                </li><a href="week03/images/landscape.webp">Activity 3-WebP</a>
-                </li><a href="week03/responsive-images.html">Activity 3-Responsive</a>
-            </ul>
-        </section>
-    
-        <section class="card">
-            <h2>Information!</h2>
-        </section>
-        <p><span class="label">Number of Visits: </span><span class="visits"></span></p>
+        <h2>WDD 230: Web Frontend Development</h2>
+        <div class="content">
+            <section>
+                <h3>Learning Activities</h3>
+                <ul id="activities"></ul>
+            </section>
+            <section>
+                <h3>Information!</h3>
+                <p id="temperature"></p>
+                <p id="description"></p>
+                <img id="weather-icon" alt="Weather Icon">
+                <p>Buenos Aires, Argentina</p>
+                <p>Number of Visits: <span class="visits"></span></p>
+            </section>
+        </div>
     </main>
- <div class="map">
-    <iframe 
-        src="https://maps.app.goo.gl/qkv4re9ewewTYiWW7">
-    </iframe>
-</div>
     <footer>
-        <p>&copy; <span id="currentYear"></span> Patricia Gargano, Argentina <img src="images/bandera_Argentina.jpeg" height="20" width="20" alt="Flag of Argentina"> </p>
+        <p>© <span id="currentYear"></span> Patricia Gargano | Argentina</p>
         <p id="lastModified"></p>
     </footer>
+    <script>
+        const baseURL = "https://patriciagargano.github.io/wdd230/";
+        const linksURL = `${baseURL}data/links.json`;
+
+        async function getLinks() {
+            try {
+                const response = await fetch(linksURL);
+                const data = await response.json();
+                displayLinks(data.weeks);
+            } catch (error) {
+                console.error('Error fetching links:', error);
+            }
+        }
+
+        function displayLinks(weeks) {
+            const activitiesList = document.getElementById('activities');
+            activitiesList.innerHTML = ''; // Clear existing content
+
+            weeks.forEach(week => {
+                const weekItem = document.createElement('li');
+                weekItem.textContent = week.week;
+
+                const linksList = document.createElement('ul');
+                week.links.forEach(link => {
+                    const linkItem = document.createElement('li');
+                    const anchor = document.createElement('a');
+                    anchor.href = `${baseURL}${link.url}`;
+                    anchor.textContent = link.title;
+                    linkItem.appendChild(anchor);
+                    linksList.appendChild(linkItem);
+                });
+
+                activitiesList.appendChild(weekItem);
+                activitiesList.appendChild(linksList);
+            });
+        }
+
+        getLinks(); // Call the function to load links
+    </script>
     <script src="scripts/getDates.js"></script>
     <script src="scripts/menu.js"></script>
     <script src="scripts/darkModeToggle.js"></script>
     <script src="scripts/visits.js"></script>
+    <script src="scripts/weather.js"></script>
 </body>
 </html>
+
+
+

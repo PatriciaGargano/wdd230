@@ -1,4 +1,4 @@
-const baseURL = "https://yourgithubusername.github.io/wdd230/";
+const baseURL = "https://patriciagargano.github.io/wdd230/";
 const linksURL = `${baseURL}data/links.json`;
 
 async function getLinks() {
