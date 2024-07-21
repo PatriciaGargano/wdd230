@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Cotillo Amorosi",
+        "address": "20 Donado, Bahia Blanca, Argentina",
+        "phone": "(291) 446 6278",
+        "website": "https://cotillonamorosi.mitiendanube.com/",
+        "image": "images/logoamorosi.jpeg",
+        "membershipLevel": "Gold",
+        "description": "A leading company in entertainment industry."
+    },
+    {
+        "name": "Vea",
+        "address": "472 Casanova St, Bahia Blanca, Argentina",
+        "phone": "0810-999-9832",
+        "website": "https://www.vea.com.ar/",
+        "image": "images/vea.jpeg",
+        "membershipLevel": "Silver",
+        "description": "Known for its excellent food service."
+    },
+    {
+        "name": "Bisg six",
+        "address": "125  Donado St, Bahia Blanca, Argentina",
+        "phone": "(291) 678-9012",
+        "website": "https://www.instagram.com/bigsix_ok/",
+        "image": "images/b6.png",
+        "membershipLevel": "Bronze",
+        "description": "Fast food leader"
+    },
+    {
+        "name": "Madison",
+        "address": "421 Alem st, Bahia Blanca, Argentina",
+        "phone": "(291) 5278668",
+        "website": "https://www.instagram.com/madison.bahia",
+        "image": "images/madison.jpeg",
+        "membershipLevel": "Gold",
+        "description": "Experts in food service"
+    },
+    {
+        "name": "Lucciano s",
+        "address": "293 Alem St, Bahia Blanca, Argentina",
+        "phone": "(291) 890-1234",
+        "website": "https://luccianos.net/en/news/hello-bahia-blanca",
+        "image": "images/lucciano.jpeg",
+        "membershipLevel": "Silver",
+        "description": "Excellent ice cream."
+    },
+    {
+        "name": "Cooperativa Obrera",
+        "address": "200 General Paz St, Bahia Blanca, Argentina",
+        "phone": "(291) 901-2345",
+        "website": "https://www.cooperativaobrera.coop/",
+        "image": "images/cope.png",
+        "membershipLevel": "Bronze",
+        "description": "The best groceries store of bahia blanca."
+    },
+    {
+        "name": "Company G",
+        "address": "4162 CAlberto Pedro Cabrera St, Bahia Blanca, Argentina",
+        "phone": "(291) 486-0022",
+        "website": "https://makro.com.ar/",
+        "image": "images/makro.jpeg",
+        "membershipLevel": "Gold",
+        "description": "Leaders in the supermarket sector."
+    }
+]

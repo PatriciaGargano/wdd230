@@ -145,9 +145,36 @@ footer p {
     border-radius: 5px;
   }
   
+  /* Basic styles for card and list view */
+  .member-card, .member-list {
+    display: none;
+}
+
+.card-view .member-card {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.list-view .member-list {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.member-card img, .member-list img {
+    width: 100px;
+    height: auto;
+}
+
   @media (min-width: 768px) {
     body {
       grid-template-columns: 1fr 3fr;
     }
   }
   
+        

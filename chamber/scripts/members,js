@@ -1,0 +1,68 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const apiUrl = 'data/members.json'; // Ruta al archivo JSON
+    const membersContainer = document.getElementById('members-container');
+    const toggleViewButton = document.getElementById('toggleView');
+    let isCardView = true; // Inicialmente en vista de tarjetas
+
+    // Verificar si membersContainer existe
+    if (!membersContainer) {
+        console.error('Error: members-container element not found.');
+        return; // Salir del script si el contenedor no se encuentra
+    }
+
+    // Verificar si toggleViewButton existe
+    if (!toggleViewButton) {
+        console.error('Error: toggleView button not found.');
+        return; // Salir del script si el botón de alternar vista no se encuentra
+    }
+
+    async function loadMembers() {
+        try {
+            const response = await fetch(apiUrl);
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            const members = await response.json();
+            displayMembers(members);
+        } catch (error) {
+            console.error('Error fetching member data:', error);
+        }
+    }
+
+    function displayMembers(members) {
+        membersContainer.innerHTML = ''; // Limpia el contenedor
+
+        members.forEach(member => {
+            const memberElement = document.createElement('div');
+            memberElement.className = isCardView ? 'member-card' : 'member-list';
+
+            // Manejo de campos null o undefined
+            const name = member.name ?? 'No Name';
+            const address = member.address ?? 'No Address';
+            const phone = member.phone ?? 'No Phone';
+            const website = member.website ?? '#';
+            const image = member.image ?? 'default.jpg'; // Usa una imagen por defecto si no hay imagen
+            const membershipLevel = member.membershipLevel ?? 'No Level';
+            const description = member.description ?? 'No Description';
+
+            memberElement.innerHTML = `
+                <img src="images/${image}" alt="${name}" onerror="this.src='images/default.jpg';">
+                <h3>${name}</h3>
+                <p><strong>Address:</strong> ${address}</p>
+                <p><strong>Phone:</strong> ${phone}</p>
+                <p><strong>Website:</strong> <a href="${website}" target="_blank">${website}</a></p>
+                <p><strong>Membership Level:</strong> ${membershipLevel}</p>
+                <p>${description}</p>
+            `;
+            membersContainer.appendChild(memberElement);
+        });
+    }
+
+    toggleViewButton.addEventListener('click', () => {
+        isCardView = !isCardView;
+        membersContainer.className = isCardView ? 'card-view' : 'list-view';
+        loadMembers(); // Recargar miembros con el nuevo formato de vista
+    });
+
+    loadMembers(); // Inicial carga de miembros
+});
