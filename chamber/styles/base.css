@@ -169,15 +169,12 @@ footer p {
     margin: 5px 0; /* Add margin between footer paragraphs */
 }
 
+
 .sidebar {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 10px;
     background-color: #f0f0f0;
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
-  }
+}
   
   /* Basic styles for card and list view */
   .member-card, .member-list {
